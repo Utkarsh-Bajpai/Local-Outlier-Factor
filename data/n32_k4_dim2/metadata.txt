@@ -1,0 +1,6 @@
+Nr points, dim, nr neigh
+32,2,4
+Min per dimension
+-13.294802718983068, -17.71693711544051
+Max per dimension
+12.725335036257833, 14.00194553426836

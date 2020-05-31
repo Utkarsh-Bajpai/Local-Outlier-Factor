@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="FastLOF"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="final_benchmark">
+				<Option output="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/final_benchmark" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 final_benchmark"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="final_benchmark/fast">
+				<Option output="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/final_benchmark" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 final_benchmark/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="memory">
+				<Option output="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/memory" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 memory"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="memory/fast">
+				<Option output="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/memory" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 memory/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="avx">
+				<Option output="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/avx" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 avx"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="avx/fast">
+				<Option output="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/avx" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 avx/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unrolled">
+				<Option output="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/unrolled" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 unrolled"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unrolled/fast">
+				<Option output="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/unrolled" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 unrolled/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="baseline">
+				<Option output="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/baseline" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 baseline"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="baseline/fast">
+				<Option output="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/baseline" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Utkarsh._.Bajpai/team025/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 baseline/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/Utkarsh._.Bajpai/team025/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/include/AVXMetrics.h">
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/include/AVXTopoInfo.h">
+			<Option target="final_benchmark"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/include/AVX_utils.h">
+			<Option target="final_benchmark"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/include/ComputeKDistanceAll.h">
+			<Option target="avx"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/include/ComputeKDistanceNeighborhood.h">
+			<Option target="avx"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/include/ComputeKDistanceObject.h">
+			<Option target="avx"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/include/ComputeLocalOutlierFactor.h">
+			<Option target="final_benchmark"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/include/ComputeLocalReachabilityDensityMerged.h">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/include/ComputeLocalReachabilityDensityMerged_Point.h">
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/include/ComputePairwiseDistanceMMMAvx.h">
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/include/ComputeReachabilityDistance.h">
+			<Option target="avx"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/include/KNN.h">
+			<Option target="avx"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/include/MMMAvx.h">
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/main.c">
+			<Option target="avx"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/performance_improvement/AVXTopoInfo.c">
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/performance_improvement/AVX_lattice.c">
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/performance_improvement/AVX_metrics.c">
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/performance_improvement/ComputeKDistanceAll.c">
+			<Option target="avx"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/performance_improvement/ComputeKDistanceObject.c">
+			<Option target="avx"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/performance_improvement/ComputeLocalOutlierFactor.c">
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/performance_improvement/ComputeLocalReachabilityDensityMerged.c">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/performance_improvement/ComputeLocalReachabilityDensityMerged_Point.c">
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/performance_improvement/ComputePairwiseDistanceMMMAvx.c">
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/performance_improvement/FasterMetrics.c">
+			<Option target="avx"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/performance_improvement/KNN.c">
+			<Option target="avx"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/performance_improvement/MMMAvx.c">
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/avx/src/AVX_utils.c">
+			<Option target="final_benchmark"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/baseline/main.c">
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/benchmarks/benchmark_baseline.c">
+			<Option target="final_benchmark"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/include/Algorithm.h">
+			<Option target="final_benchmark"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/include/ComputeTopologyInfo.h">
+			<Option target="final_benchmark"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/include/benchmarks.h">
+			<Option target="final_benchmark"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/include/file_utils.h">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/include/final_plots.h">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/include/lattice.h">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/include/lof_baseline.h">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/include/metrics.h">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/include/performance_measurement.h">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/include/sort.h">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/include/tests.h">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/include/tsc_x86.h">
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/include/utils.h">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/main.c">
+			<Option target="final_benchmark"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/include/ComputeKDistanceAll.h">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/include/ComputeKDistanceNeighborhood.h">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/include/ComputeKDistanceObject.h">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/include/ComputeLocalOutlierFactor.h">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/include/ComputeLocalReachabilityDensity.h">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/include/ComputeLocalReachabilityDensityMerged.h">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/include/ComputeLocalReachabilityDensityMerged_Pipeline2.h">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/include/ComputePairwiseDistanceMMMAnastasia.h">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/include/ComputeReachabilityDistance.h">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/main.c">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/performance_improvement/ComputeKDistanceAll.c">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/performance_improvement/ComputeKDistanceNeighborhood.c">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/performance_improvement/ComputeKDistanceObject.c">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/performance_improvement/ComputeLocalOutlierFactor.c">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/performance_improvement/ComputeLocalReachabilityDensityMerged.c">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/performance_improvement/ComputeLocalReachabilityDensityMerged_Pipeline2.c">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/performance_improvement/ComputePairwiseDistanceMMMAnastasia.c">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/memory/performance_improvement/ComputeReachabilityDistance.c">
+			<Option target="memory"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/src/Algorithm.c">
+			<Option target="final_benchmark"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/src/ComputeTopologyInfo.c">
+			<Option target="final_benchmark"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/src/file_utils.c">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/src/final_plots.c">
+			<Option target="final_benchmark"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/src/lattice.c">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/src/lof_baseline.c">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/src/metrics.c">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/src/performance_measurement.c">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/src/sort.c">
+			<Option target="final_benchmark"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/src/tests.c">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/src/utils.c">
+			<Option target="final_benchmark"/>
+			<Option target="memory"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+			<Option target="baseline"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/include/ComputeKDistanceAll.h">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/include/ComputeKDistanceNeighborhood.h">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/include/ComputeKDistanceObject.h">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/include/ComputeLocalOutlierFactor.h">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/include/ComputeLocalReachabilityDensity.h">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/include/ComputeLocalReachabilityDensityMerged_Point.h">
+			<Option target="avx"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/include/ComputePairwiseDistancesMMMUnroll.h">
+			<Option target="final_benchmark"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/include/ComputeReachabilityDistance.h">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/include/KNN.h">
+			<Option target="final_benchmark"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/include/MMM.h">
+			<Option target="final_benchmark"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/include/metrics.h">
+			<Option target="final_benchmark"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/main.c">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/performance_improvement/ComputeKDistanceAll.c">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/performance_improvement/ComputeKDistanceNeighborhood.c">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/performance_improvement/ComputeKDistanceObject.c">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/performance_improvement/ComputeLocalReachabilityDensity.c">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/performance_improvement/ComputeLocalReachabilityDensityMerged.c">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/performance_improvement/ComputePairwiseDistancesMMMUnroll.c">
+			<Option target="final_benchmark"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/performance_improvement/ComputeReachabilityDistance.c">
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/performance_improvement/FasterMetrics.c">
+			<Option target="final_benchmark"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/performance_improvement/KNN.c">
+			<Option target="final_benchmark"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/unrolled/performance_improvement/MMM.c">
+			<Option target="final_benchmark"/>
+			<Option target="avx"/>
+			<Option target="unrolled"/>
+		</Unit>
+		<Unit filename="/Users/Utkarsh._.Bajpai/team025/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
