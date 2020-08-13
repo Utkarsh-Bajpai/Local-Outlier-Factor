@@ -26,7 +26,8 @@ double sum_double_avx(__m256d v) { // claimed to be faster
 }*/
 
 double AVXEuclideanDistance(const double v1_ptr[], const double v2_ptr[], int n_dim)  {
-    double dist = 0;
+
+    double dist = 0.0;
     if(n_dim < 4) {
         for(int i = 0; i < n_dim; ++i) {
             dist += (v1_ptr[i] - v2_ptr[i]) * (v1_ptr[i] - v2_ptr[i]);

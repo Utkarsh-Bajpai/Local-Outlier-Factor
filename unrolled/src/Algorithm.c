@@ -19,7 +19,7 @@
 #include "../include/ComputeKDistanceNeighborhood.h"
 #include "../include/ComputeReachabilityDistance.h"
 #include "../include/ComputeLocalReachabilityDensityMerged.h"
-#include "../include/ComputeLocalOutlierFactor.h"
+#include "../include/ComputeLocalOutlierFactorUnrolled.h"
 #include "../include/KNN.h"
 #include "../include/ComputeLocalReachabilityDensity.h"
 

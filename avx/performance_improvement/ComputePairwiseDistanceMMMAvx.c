@@ -451,10 +451,10 @@ double ComputePairwiseDistancesMMMAvx_Fastest(int num_pts, int dim, int B0, int 
     int j, i;
 
     for (i = 0; i + 3 < num_pts; i += 4) {
-        double sum_0_0 = 0, sum_1_0 = 0, sum_2_0 = 0, sum_3_0 = 0;
-        double sum_0_1 = 0, sum_1_1 = 0, sum_2_1 = 0, sum_3_1 = 0;
-        double sum_0_2 = 0, sum_1_2 = 0, sum_2_2 = 0, sum_3_2 = 0;
-        double sum_0_3 = 0, sum_1_3 = 0, sum_2_3 = 0, sum_3_3 = 0;
+        double sum_0_0 = 0.0, sum_1_0 = 0.0, sum_2_0 = 0.0, sum_3_0 = 0.0;
+        double sum_0_1 = 0.0, sum_1_1 = 0.0, sum_2_1 = 0.0, sum_3_1 = 0.0;
+        double sum_0_2 = 0.0, sum_1_2 = 0.0, sum_2_2 = 0.0, sum_3_2 = 0.0;
+        double sum_0_3 = 0.0, sum_1_3 = 0.0, sum_2_3 = 0.0, sum_3_3 = 0.0;
 
         int base_0 = i * dim;
         int base_1 = base_0 + dim;
@@ -494,7 +494,7 @@ double ComputePairwiseDistancesMMMAvx_Fastest(int num_pts, int dim, int B0, int 
         squared_input[i + 3] = sum_0_3 + sum_1_3 + sum_2_3 + sum_3_3;
     }
     for (; i < num_pts; i++) {
-        double sum_0 = 0, sum_1 = 0, sum_2 = 0, sum_3 = 0;
+        double sum_0 = 0.0, sum_1 = 0.0, sum_2 = 0.0, sum_3 = 0.0;
         int base_0 = i * dim;
 
         for (j = 0; j + 3 < dim; j += 4) {
@@ -601,14 +601,14 @@ double ComputePairwiseDistancesMMMAvx_Fastest(int num_pts, int dim, int B0, int 
     free(squared_input);
     free(mm_res);
 
-    return 2 * num_pts * dim + 2.0 * num_pts * (num_pts - 1) * dim / 2 + num_pts * (num_pts - 1) * 4.0 / 2;
+    return 2.0 * num_pts * dim + 2.0 * num_pts * (num_pts - 1.0) * dim / 2.0 + num_pts * (num_pts - 1.0) * 4.0 / 2.0;
 
 }
 
 
 double AVXComputePairwiseDistancesWrapper(int n, int dim, int B0, int B1, int BK, const double* input_points,
                                        double* pairwise_distances) {
-    ComputePairwiseDistancesMMMUnroll_fastest(n, dim, B0, B1, BK, input_points, pairwise_distances);
+    ComputePairwiseDistancesMMMUnroll_Fastest(n, dim, B0, B1, BK, input_points, pairwise_distances);
 
     return n * (n - 1) * 2 * dim + 2.0 * n * (n - 1) * dim / 2 + n * (n - 1) * 4 / 2.0;
 }

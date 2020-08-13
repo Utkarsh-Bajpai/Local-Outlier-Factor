@@ -3,7 +3,7 @@
 //
 
 #include <stdlib.h>
-#include "../include/metrics.h"
+#include "../../include/metrics.h"
 #include "math.h"
 #include "../../include/utils.h"
 #include "../../include/tsc_x86.h"
@@ -26,13 +26,12 @@ ComputePairwiseDistancesMMM_baseline(int num_pts, int dim, int B0, int B1, int B
                                      double* distances_indexed_ptr) {
 
     double* squared_input = XmallocVectorDouble(num_pts);
-
     double* mm_res = XmallocMatrixDouble(num_pts, num_pts);
 
     int j, i;
 
     for (i = 0; i < num_pts; i++) {
-        double sum = 0;
+        double sum = 0.0;
         for (j = 0; j < dim; j++) {
             sum += input_points_ptr[i * dim + j] * input_points_ptr[i * dim + j];
         }
@@ -41,7 +40,7 @@ ComputePairwiseDistancesMMM_baseline(int num_pts, int dim, int B0, int B1, int B
 
     for (i = 0; i < num_pts; i++) {
         for (j = 0; j < i; j++) {
-            double sum = 0;
+            double sum = 0.0;
             for (int k = 0; k < dim; k++) {
                 sum += input_points_ptr[i * dim + k] * input_points_ptr[j * dim + k];
             }
@@ -53,14 +52,14 @@ ComputePairwiseDistancesMMM_baseline(int num_pts, int dim, int B0, int B1, int B
     for (i = 0; i < num_pts; i++) {
         for (j = 0; j < i; j++) {
             distances_indexed_ptr[i * num_pts + j] = sqrt(
-                    squared_input[i] - 2 * mm_res[i * num_pts + j] + squared_input[j]);
+                    squared_input[i] - 2.0 * mm_res[i * num_pts + j] + squared_input[j]);
         }
     }
 
     free(squared_input);
     free(mm_res);
 
-    return 2 * num_pts * dim + 2.0 * num_pts * (num_pts - 1) * dim / 2 + num_pts * (num_pts - 1) * 4.0 / 2;
+    return 2.0 * num_pts * dim + 2.0 * num_pts * (num_pts - 1.0) * dim / 2.0 + num_pts * (num_pts - 1.0) * 4.0 / 2.0;
 }
 
 /**
@@ -329,7 +328,7 @@ void ComputePairwiseDistances_4(int num_pts, int dim, const double* input_points
  * Unroll outer 8 and sqrt outer 4
  */
 double
-ComputePairwiseDistancesMMMUnroll_fastest(int num_pts, int dim, int B0, int B1, int BK, const double* input_points_ptr,
+ComputePairwiseDistancesMMMUnroll_Fastest(int num_pts, int dim, int B0, int B1, int BK, const double* input_points_ptr,
                                           double* distances_indexed_ptr) {
 
     double* squared_input = XmallocVectorDouble(num_pts);
@@ -338,14 +337,14 @@ ComputePairwiseDistancesMMMUnroll_fastest(int num_pts, int dim, int B0, int B1, 
     int j, i;
 
     for (i = 0; i + 7 < num_pts; i += 8) {
-        double sum_0 = 0;
-        double sum_1 = 0;
-        double sum_2 = 0;
-        double sum_3 = 0;
-        double sum_4 = 0;
-        double sum_5 = 0;
-        double sum_6 = 0;
-        double sum_7 = 0;
+        double sum_0 = 0.0;
+        double sum_1 = 0.0;
+        double sum_2 = 0.0;
+        double sum_3 = 0.0;
+        double sum_4 = 0.0;
+        double sum_5 = 0.0;
+        double sum_6 = 0.0;
+        double sum_7 = 0.0;
 
         int base_0 = i * dim;
         int base_1 = base_0 + dim;
@@ -379,7 +378,7 @@ ComputePairwiseDistancesMMMUnroll_fastest(int num_pts, int dim, int B0, int B1, 
     }
 
     for (; i < num_pts; i++) {
-        double sum = 0;
+        double sum = 0.0;
         for (j = 0; j < dim; j++) {
             sum += input_points_ptr[i * dim + j] * input_points_ptr[i * dim + j];
         }
@@ -392,23 +391,23 @@ ComputePairwiseDistancesMMMUnroll_fastest(int num_pts, int dim, int B0, int B1, 
         for (j = i + 1; j < num_pts; j++) {
             double bla = squared_input[j];
             double s0 = squared_input[i] + bla;
-            double prod = 2 * mm_res[j * num_pts + i];
+            double prod = 2.0 * mm_res[j * num_pts + i];
             distances_indexed_ptr[j * num_pts + i] = sqrt(s0 - prod);
 
             double s1 = squared_input[i + 1] + bla;
-            double prod1 = 2 * mm_res[j * num_pts + i + 1];
+            double prod1 = 2.0 * mm_res[j * num_pts + i + 1];
             if (i + 1 < j) {
                 distances_indexed_ptr[j * num_pts + i + 1] = sqrt(s1 - prod1);
             }
 
             double s2 = squared_input[i + 2] + bla;
-            double prod2 = 2 * mm_res[j * num_pts + i + 2];
+            double prod2 = 2.0 * mm_res[j * num_pts + i + 2];
             if (i + 2 < j) {
                 distances_indexed_ptr[j * num_pts + i + 2] = sqrt(s2 - prod2);
             }
 
             double s3 = squared_input[i + 3] + bla;
-            double prod3 = 2 * mm_res[j * num_pts + i + 3];
+            double prod3 = 2.0 * mm_res[j * num_pts + i + 3];
             if (i + 3 < j) {
                 distances_indexed_ptr[j * num_pts + i + 3] = sqrt(s3 - prod3);
             }
@@ -418,7 +417,7 @@ ComputePairwiseDistancesMMMUnroll_fastest(int num_pts, int dim, int B0, int B1, 
         for (j = i + 1; j < num_pts; j++) {
             double bla = squared_input[j];
             double s0 = squared_input[i] + bla;
-            double prod = 2 * mm_res[j * num_pts + i];
+            double prod = 2.0 * mm_res[j * num_pts + i];
             distances_indexed_ptr[j * num_pts + i] = sqrt(s0 - prod);
         }
     }
@@ -426,7 +425,7 @@ ComputePairwiseDistancesMMMUnroll_fastest(int num_pts, int dim, int B0, int B1, 
     free(squared_input);
     free(mm_res);
 
-    return 2 * num_pts * dim + 2.0 * num_pts * (num_pts - 1) * dim / 2 + num_pts * (num_pts - 1) * 4.0 / 2;
+    return 2.0 * num_pts * dim + 2.0 * num_pts * (num_pts - 1.0) * dim / 2.0 + num_pts * (num_pts - 1.0) * 4.0 / 2.0;
 
 }
 
@@ -721,7 +720,7 @@ long ComputePairwiseDistancesWrapper4(int n, int dim, int B0, int B1, const doub
 
 long ComputePairwiseDistancesWrapper5(int n, int dim, int B0, int B1, const double* input_points,
                                       double* pairwise_distances) {
-    ComputePairwiseDistancesMMMUnroll_fastest(n, dim, B0, B1, 8, input_points, pairwise_distances);
+    ComputePairwiseDistancesMMMUnroll_Fastest(n, dim, B0, B1, 8, input_points, pairwise_distances);
 
     return n * (n - 1) * 2 * dim + 2 * n * (n - 1) * dim / 2 + n * (n - 1) * 4 / 2;
 }

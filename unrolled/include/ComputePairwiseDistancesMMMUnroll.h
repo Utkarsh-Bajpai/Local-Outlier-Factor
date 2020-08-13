@@ -11,7 +11,7 @@ double ComputePairwiseDistancesMMM_baseline(int num_pts, int dim, int B0, int B1
                                           double* distances_indexed_ptr);
 
 double
-ComputePairwiseDistancesMMMUnroll_fastest(int num_pts, int dim, int B0, int B1, int BK, const double* input_points_ptr,
+ComputePairwiseDistancesMMMUnroll_Fastest(int num_pts, int dim, int B0, int B1, int BK, const double* input_points_ptr,
                                           double* distances_indexed_ptr);
 
 #endif //FASTLOF_COMPUTEPAIRWISEDISTANCES_H

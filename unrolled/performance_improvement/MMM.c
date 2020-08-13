@@ -262,7 +262,7 @@ double mmm_unroll_fastest(int n, int dim, int B0, int B1, int BK, const double* 
 
                         for (i2 = i1; i2 + B2 <= i1 + B1; i2 += B2) {
                             for (j2 = j1; j2 + B2 <= j1 + B1; j2 += B2) {
-                                double s_00 = 0, s_01 = 0, s_10 = 0, s_11 = 0;
+                                double s_00 = 0.0, s_01 = 0.0, s_10 = 0.0, s_11 = 0.0;
 
                                 for (k1 = k; k1 + BK2 <= k + BK; k1 += BK2) {
                                     s_00 += input[i2 * dim + k1] * input[j2 * dim + k1];
@@ -305,7 +305,7 @@ double mmm_unroll_fastest(int n, int dim, int B0, int B1, int BK, const double* 
         // j_out
         for (i1 = i; i1 < i + B0; i1++) {
             for (j1 = j; j1 < i1; j1++) {
-                sum = 0;
+                sum = 0.0;
                 for (k = 0; k < dim; k++) {
                     sum += input[i1 * dim + k] * input[j1 * dim + k];
                 }
@@ -316,14 +316,14 @@ double mmm_unroll_fastest(int n, int dim, int B0, int B1, int BK, const double* 
 
     for (; i < n; i++) {
         for (j = 0; j < i; j++) {
-            sum = 0;
+            sum = 0.0;
             for (k = 0; k < dim; k++) {
                 sum += input[i * dim + k] * input[j * dim + k];
             }
             result[i * n + j] = sum;
         }
     }
-    return 2.0 * n * (n - 1) * dim / 2;
+    return 2.0 * n * (n - 1.0) * dim / 2.0;
 }
 
 

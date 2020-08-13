@@ -17,13 +17,18 @@
 // ---------------------------------------------------------------------------------------------->
 // Plot 3 flops per cycle (4 pipelines x 3: baseline + unrolled + avx)
 #define NUM_SINGLE_RUNS = 10
-
+//  Single static assignment (SSA) code: !
 void performance_plot_algo_num_pts(int k_ref, int dim_ref,
                                    int* num_pts_grid,
                                    const char* file_name,
                                    const char* function_name, const char* mode,
                                    int B0, int B1, // for blocked MMM
                                    int num_splits, int resolution, // for lattice
+                                  // ubajpai@student.ethz.ch, rpasca@student.ethz.ch, fvasluianu@student.ethz.ch
+                                  // Bajpai Utkarsh;
+        //Pasca Razvan;
+        //Theodoridis Theodoros
+        //Vasluianu Florin
 
         // FUNCTIONS FOR baseline
                                    my_metrics_fnc metrics_fnc,
@@ -40,7 +45,7 @@ void performance_plot_algo_num_pts(int k_ref, int dim_ref,
                                    my_lof2_fnc lof2_fnc,
 
         // FUNCTIONS FOR knn_blocked_mmm
-                                   my_dist_block_fnc dist_block_fnc,
+                                   my_mmm_dist_fnc dist_block_fnc,
 
         // FUNCTIONS FOR lattice
                                    my_topolofy_fnc topolofy_fnc) {
@@ -52,16 +57,13 @@ void performance_plot_algo_num_pts(int k_ref, int dim_ref,
      *
      */
 
-
-
     unsigned int rep;
-
-
-
 
     //for (num_pts = 4; num_pts < max_num_pts; num_pts += step)
     int num_pts_current;
-    for (int i = 0; i < 9; i++) {
+
+    int i_start = 0, i_fin = 5;
+    for (int i = i_start; i < i_fin; i++) {
 
         FILE* results_file = fopen(file_name, mode);
         // SHOULD BE LESS THAN NUM PTS !!! - add assertion
@@ -74,8 +76,6 @@ void performance_plot_algo_num_pts(int k_ref, int dim_ref,
         fprintf(results_file, "%s\n", function_name);
         fprintf(results_file, "%d\n", k_ref);
         fprintf(results_file, "\n");
-
-
 
 
         num_pts_current = num_pts_grid[i];
@@ -97,12 +97,11 @@ void performance_plot_algo_num_pts(int k_ref, int dim_ref,
                                                        lrdm_fnc,
                                                        lof_fnc);
 
-                printf("Hello\n");
-
                 fprintf(results_file, "%f, ", res);
+                printf("%f, ", res);
             }
 
-            printf("Baseline benchmark done!\n");
+            printf("\nBaseline benchmark done!\n");
             printf("-------------------------\n");
 
             // MEASUREMENTS FOR knn_memory_struct
@@ -125,6 +124,7 @@ void performance_plot_algo_num_pts(int k_ref, int dim_ref,
 
             printf("KNN with memory lof benchmark done!\n");
             printf("-------------------------\n");
+            */
 
             // MEASUREMENTS FOR knn_blocked_mmm
             fprintf(results_file, "\nknn_blocked_mmm\n");
@@ -141,9 +141,10 @@ void performance_plot_algo_num_pts(int k_ref, int dim_ref,
                                                               lof2_fnc);
 
                 fprintf(results_file, "%f, ", res);
+                printf("%f, ", res);
             }
 
-            printf("KNN with MMM pairwise and lof memory structure benchmark done!\n");
+            printf("\nKNN with MMM pairwise and lof memory structure benchmark done!\n");
             printf("-------------------------\n");
 
 
@@ -162,10 +163,11 @@ void performance_plot_algo_num_pts(int k_ref, int dim_ref,
                                                       lof2_fnc);
 
                 fprintf(results_file, "%f, ", res);
+                printf("%f, ", res);
             }
 
-            printf("Lattice heuristic with lof memory structure benchmark done\n!");
-            printf("-------------------------\n");*/
+            printf("\nLattice heuristic with lof memory structure benchmark done!\n");
+            printf("-------------------------\n");
 
 
         }
@@ -200,7 +202,7 @@ void driver_runtime_performance_plot_algo_num_pts(int k_ref, int dim_ref,
                                                   my_lof2_fnc lof2_fnc,
 
         // FUNCTIONS FOR knn_blocked_mmm
-                                                  my_dist_block_fnc dist_block_fnc,
+                                                  my_mmm_dist_fnc dist_block_fnc,
 
         // FUNCTIONS FOR lattice
                                                   my_topolofy_fnc topolofy_fnc) {
@@ -274,23 +276,14 @@ void driver_runtime_performance_plot_algo_num_pts(int k_ref, int dim_ref,
             tic = clock();
             for (rep = 0; rep < num_rep_measurements; rep++) {
 
-                /*
-                algorithm_driver_knn_memory_struct(num_pts_current, k_ref, dim_ref,
-                        // functions
-                                                                metrics_fnc,
-                                                                dist_fnc,
-                                                                knn_fnc,
-                                                                lrdm2_pnt_fnc,
-                                                                lrdm2_fnc,
-                                                                lof2_fnc);
-                */
-                double res =  algorithm_driver_baseline_razavn(num_pts_current, k_ref, dim_ref,
-                                                               B0, B1,
-                                                               dist_block_fnc,
-                                                               kdist_fnc,
-                                                               neigh_fnc,
-                                                               lrdm_fnc,
-                                                               lof_fnc);
+
+                double res = algorithm_driver_baseline_mmm_pairwise_distance(num_pts_current, k_ref, dim_ref,
+                                                                             B0, B1,
+                                                                             dist_block_fnc,
+                                                                             kdist_fnc,
+                                                                             neigh_fnc,
+                                                                             lrdm_fnc,
+                                                                             lof_fnc);
 
             }
             toc = clock();
@@ -311,14 +304,13 @@ void driver_runtime_performance_plot_algo_num_pts(int k_ref, int dim_ref,
             tic = clock();
             for (rep = 0; rep < num_rep_measurements; rep++) {
 
-                algorithm_driver_knn_blocked_mmm(num_pts_current, k_ref, dim_ref,
-                                                 B0, B1,
-                        // functions
-                                                 dist_block_fnc,
-                                                 knn_fnc,
-                                                 lrdm2_pnt_fnc,
-                                                 lrdm2_fnc,
-                                                 lof2_fnc);
+                algorithm_driver_knn_mmm_pairwise_dist(num_pts_current, k_ref, dim_ref,
+                                                       B0, B1,
+                                                       dist_block_fnc,
+                                                       knn_fnc,
+                                                       lrdm2_pnt_fnc,
+                                                       lrdm2_fnc,
+                                                       lof2_fnc);
 
             }
             toc = clock();

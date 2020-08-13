@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/cc -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/FastLOF.dir/baseline/main.c.o CMakeFiles/FastLOF.dir/baseline/src/lof.c.o CMakeFiles/FastLOF.dir/baseline/src/utils.c.o CMakeFiles/FastLOF.dir/baseline/src/metrics.c.o  -o FastLOF  -lm 

@@ -8,10 +8,10 @@
 #include "../include/metrics.h"
 
 double ComputeFlopsEuclidianDistance(int dim) {
-    return 4 * dim + 1;
+    return 4.0 * dim + 1.0;
 }
 double EuclideanDistance(const double *v1_ptr, const double *v2_ptr, int n_dim) {
-    double dist = 0;
+    double dist = 0.0;
     for (int i = 0; i < n_dim; ++i) {
         dist += (v1_ptr[i] - v2_ptr[i]) * (v1_ptr[i] - v2_ptr[i]);
     }

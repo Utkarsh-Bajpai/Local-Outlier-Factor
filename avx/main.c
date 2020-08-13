@@ -11,16 +11,7 @@
 #include "../include/performance_measurement.h"
 #include "../include/tests.h"
 
-#include "include/ComputeLocalReachabilityDensity.h"
-#include "include/ComputeReachabilityDistance.h"
-#include "include/ComputeLocalReachabilityDensityMerged.h"
-#include "include/ComputeLocalOutlierFactor.h"
-#include "include/ComputeLocalReachabilityDensityMerged_Point.h"
-
-#include "include/AVXMetrics.h"
-#include "../include/lattice.h"
-#include "include/AVXTopoInfo.h"
-#include "include/ComputePairwiseDistanceMMMAvx.h"
+#include "include/ComputeLocalReachabilityDensityMerged_PointAVX.h"
 #include "include/MMMAvx.h"
 
 int main() {

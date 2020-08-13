@@ -10,8 +10,8 @@
 #include "../include/file_utils.h"
 #include "../include/lof_baseline.h"
 
-#include "../unrolled/include/metrics.h"
-#include "../unrolled/include/ComputeKDistanceAll.h"
+#include "../include/metrics.h"
+#include "../unrolled/include/ComputeKDistanceAllUnrolled.h"
 #include "../unrolled/include/Algorithm.h"
 #include "../include/metrics.h"
 

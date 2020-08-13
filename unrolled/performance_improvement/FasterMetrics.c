@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#include "../include/metrics.h"
+#include "../../include/metrics.h"
 #include "../../include/tsc_x86.h"
 #include "../../include/utils.h"
 #include "../../include/lof_baseline.h"
@@ -14,14 +14,14 @@ int METRICS_NUM_RUNS_UN = 1000;
 int METRICS_NUM_SMALL_RUNS_UN = 10;    // average over 10
 
 double UnrolledEuclideanDistance(const double* v1_ptr, const double* v2_ptr, int n_dim) {
-    double dist = 0;
+    double dist = 0.0;
     if (n_dim <= 10) {
         for (int i = 0; i < n_dim; ++i) {
             dist += (v1_ptr[i] - v2_ptr[i]) * (v1_ptr[i] - v2_ptr[i]);
         }
     } else {
-        double acc_1 = 0, acc_2 = 0, acc_3 = 0, acc_4 = 0, acc_5 = 0,
-                acc_6 = 0, acc_7 = 0, acc_8 = 0, acc_9 = 0, acc_10 = 0;
+        double acc_1 = 0.0, acc_2 = 0.0, acc_3 = 0.0, acc_4 = 0.0, acc_5 = 0.0,
+                acc_6 = 0.0, acc_7 = 0.0, acc_8 = 0.0, acc_9 = 0.0, acc_10 = 0.0;
         double a1, a2, a3, a4, a5, a6, a7, a8, a9, a10;
         int i;
         int n_runs = 0;

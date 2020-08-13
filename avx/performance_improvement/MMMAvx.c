@@ -504,7 +504,7 @@ double mmm_avx_fastest(int n, int dim, int B0, int B1, int BK, const double* inp
                                 _mm256_storeu_pd(result + (i2 + 1) * n + j2, final_i_1_j);
                             }
                             for (j3 = j2; j3 < j1 + B1; j3++) {
-                                double s_00 = 0, s_10 = 0;
+                                double s_00 = 0.0, s_10 = 0.0;
                                 for (k1 = k; k1 + BK2 <= k + BK; k1 += BK2) {
                                     s_00 += input[i1 * dim + k1] * input[j3 * dim + k1];
                                     s_00 += input[i1 * dim + k1 + 1] * input[j3 * dim + k1 + 1];
@@ -595,7 +595,7 @@ double mmm_avx_fastest(int n, int dim, int B0, int B1, int BK, const double* inp
                                 }
                             }
                             for (; j2 < j1 + B1; j2++) {
-                                double s_0 = 0, s_1 = 0;
+                                double s_0 = 0.0, s_1 = 0.0;
                                 for (k1 = k; k1 + BK2 <= dim; k1 += BK2) {
                                     s_0 += input[i2 * dim + k1] * input[j2 * dim + k1];
                                     s_0 += input[i2 * dim + k1 + 1] * input[j2 * dim + k1 + 1];
@@ -617,7 +617,7 @@ double mmm_avx_fastest(int n, int dim, int B0, int B1, int BK, const double* inp
 
                         } else {
                             for (j2 = j1; j2 + B2i <= j1 + B1; j2 += B2i) {
-                                double s_00 = 0, s_10 = 0, s_01 = 0, s_11 = 0;
+                                double s_00 = 0.0, s_10 = 0.0, s_01 = 0.0, s_11 = 0.0;
                                 for (k1 = k; k1 < dim; k1++) {
                                     s_00 += input[i2 * dim + k1] * input[j2 * dim + k1];
                                     s_01 += input[i2 * dim + k1] * input[(j2 + 1) * dim + k1];
@@ -642,7 +642,7 @@ double mmm_avx_fastest(int n, int dim, int B0, int B1, int BK, const double* inp
 
                     for (i2 = i1; i2 + 2 <= i1 + B1; i2 += 2) {
                         for (j2 = j1; j2 + 2 <= j1 + B1; j2 += 2) {
-                            double s_00 = 0, s_01 = 0, s_10 = 0, s_11 = 0;
+                            double s_00 = 0.0, s_01 = 0.0, s_10 = 0.0, s_11 = 0.0;
 
                             for (k1 = k; k1 + BK2 <= k + BK; k1 += BK2) {
                                 s_00 += input[i2 * dim + k1] * input[j2 * dim + k1];
@@ -675,7 +675,7 @@ double mmm_avx_fastest(int n, int dim, int B0, int B1, int BK, const double* inp
                 //collecting k
                 for (i2 = i1; i2 + 2 <= i1 + B1; i2 += 2) {
                     for (j2 = j1; j2 + 2 <= j1 + B1; j2 += 2) {
-                        double sum_00 = 0, sum_10 = 0, sum_01 = 0, sum_11 = 0;
+                        double sum_00 = 0.0, sum_10 = 0.0, sum_01 = 0.0, sum_11 = 0.0;
                         for (k1 = k; k1 < dim; k1++) {
                             sum_00 += input[i2 * dim + k1] * input[j2 * dim + k1];
                             sum_10 += input[(i2 + 1) * dim + k1] * input[j2 * dim + k1];
@@ -692,7 +692,7 @@ double mmm_avx_fastest(int n, int dim, int B0, int B1, int BK, const double* inp
             //collecting j1 which was unrolled by B1
             for (i2 = i1; i2 + 2 <= i1 + B1; i2 += 2) {
                 for (j2 = j1; j2 <= i2; j2++) {
-                    double sum_0 = 0, sum_1 = 0;
+                    double sum_0 = 0.0, sum_1 = 0.0;
                     for (k = 0; k + BK2 <= dim; k += BK2) {
                         sum_0 += input[i2 * dim + k] * input[j2 * dim + k];
                         sum_1 += input[(i2 + 1) * dim + k] * input[j2 * dim + k];
@@ -781,7 +781,7 @@ double mmm_avx_fastest(int n, int dim, int B0, int B1, int BK, const double* inp
                             _mm256_storeu_pd(result + (i1 + 1) * n + j2, final_i_1_j);
                         }
                         for (j3 = j2; j3 < j1 + B1; j3++) {
-                            double s_00 = 0, s_10 = 0;
+                            double s_00 = 0.0, s_10 = 0.0;
                             for (k1 = k; k1 + BK2 <= k + BK; k1 += BK2) {
                                 s_00 += input[i1 * dim + k1] * input[j3 * dim + k1];
                                 s_00 += input[i1 * dim + k1 + 1] * input[j3 * dim + k1 + 1];
@@ -887,7 +887,7 @@ double mmm_avx_fastest(int n, int dim, int B0, int B1, int BK, const double* inp
                         }
                     } else {
                         for (j2 = j1; j2 + B2i <= j1 + B1; j2 += B2i) {
-                            double sum_00 = 0, sum_01 = 0, sum_10 = 0, sum_11 = 0;
+                            double sum_00 = 0.0, sum_01 = 0.0, sum_10 = 0.0, sum_11 = 0.0;
                             for (k1 = k; k1 < dim; k1++) {
                                 sum_00 += input[i1 * dim + k1] * input[j2 * dim + k1];
                                 sum_10 += input[(i1 + 1) * dim + k1] * input[j2 * dim + k1];
@@ -907,7 +907,7 @@ double mmm_avx_fastest(int n, int dim, int B0, int B1, int BK, const double* inp
         //Need to block here on j1 since it goes from 200 to 220 for B0 =100 and B1= 20
         for (i1 = i; i1 + B2i <= i + B1; i1 += B2i) {
             for (j1 = j; j1 + B2i <= i1 + B2i; j1 += B2i) {
-                double s_00 = 0, s_01 = 0, s_10 = 0, s_11 = 0;
+                double s_00 = 0.0, s_01 = 0.0, s_10 = 0.0, s_11 = 0.0;
                 for (k1 = 0; k1 + BK2 <= dim; k1 += BK2) {
                     s_00 += input[i1 * dim + k1] * input[j1 * dim + k1];
                     s_01 += input[i1 * dim + k1] * input[(j1 + 1) * dim + k1];
@@ -994,7 +994,7 @@ double mmm_avx_fastest(int n, int dim, int B0, int B1, int BK, const double* inp
                     result[i1 * n + j2 + 3] += s_3;
                 }
                 for (; j2 < j1 + B1; j2++) {
-                    sum = 0;
+                    sum = 0.0;
                     for (k = 0; k + BK2 <= dim; k += BK2) {
                         sum += input[i1 * dim + k] * input[j2 * dim + k];
                         sum += input[i1 * dim + k + 1] * input[j2 * dim + k + 1];
@@ -1010,7 +1010,7 @@ double mmm_avx_fastest(int n, int dim, int B0, int B1, int BK, const double* inp
         }
         for (; j <= i1 - B1; j += B1) {
             for (j1 = j; j1 < j + B1; j1++) {
-                sum = 0;
+                sum = 0.0;
                 for (k = 0; k + BK2 <= dim; k += BK2) {
                     sum += input[i1 * dim + k] * input[j1 * dim + k];
                     sum += input[i1 * dim + k + 1] * input[j1 * dim + k + 1];
@@ -1024,7 +1024,7 @@ double mmm_avx_fastest(int n, int dim, int B0, int B1, int BK, const double* inp
             }
         }
         for (; j < i1; j++) {
-            sum = 0;
+            sum = 0.0;
             for (k = 0; k + BK2 <= dim; k += BK2) {
                 sum += input[i1 * dim + k] * input[j * dim + k];
                 sum += input[i1 * dim + k + 1] * input[j * dim + k + 1];
@@ -1037,14 +1037,14 @@ double mmm_avx_fastest(int n, int dim, int B0, int B1, int BK, const double* inp
             result[i1 * n + j] += sum;
         }
     }
-    return 2.0 * n * (n - 1) * dim / 2;
+    return 2.0 * n * (n - 1.0) * dim / 2.0;
 }
 
 
 double baseline_wrapper(int n, int dim, int B0, int B1, int BK, const double* input, double* result) {
     mmm_baseline(n, dim, input, result);
 
-    return 2.0 * n * (n - 1) * dim / 2;
+    return 2.0 * n * (n - 1.0) * dim / 2.0;
 }
 
 

@@ -14,7 +14,7 @@
 
 // ---------------------------------------------------------------------------------------------->
 
-void performance_plot_algo_num_pts(int k_ref,  int dim_ref,
+void performance_plot_algo_num_pts(int k_ref, int dim_ref,
                                    int* num_pts_grid,
                                    const char* file_name,
                                    const char* function_name, const char* mode,
@@ -36,7 +36,7 @@ void performance_plot_algo_num_pts(int k_ref,  int dim_ref,
                                    my_lof2_fnc lof2_fnc,
 
                                    // FUNCTIONS FOR knn_blocked_mmm
-                                   my_dist_block_fnc dist_block_fnc,
+                                   my_mmm_dist_fnc dist_block_fnc,
 
                                    // FUNCTIONS FOR lattice
                                    my_topolofy_fnc topolofy_fnc );
@@ -64,7 +64,7 @@ void driver_runtime_performance_plot_algo_num_pts(int k_ref, int dim_ref,
                                                   my_lof2_fnc lof2_fnc,
 
         // FUNCTIONS FOR knn_blocked_mmm
-                                                  my_dist_block_fnc dist_block_fnc,
+                                                  my_mmm_dist_fnc dist_block_fnc,
 
         // FUNCTIONS FOR lattice
                                                   my_topolofy_fnc topolofy_fnc);

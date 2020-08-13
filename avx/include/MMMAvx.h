@@ -5,7 +5,7 @@
 #ifndef FASTLOF_MMMAVX_H
 #define FASTLOF_MMMAVX_H
 
-typedef double (* my_dist_block_fnc) (int, int, int, int, int, const double*, double*);
+typedef double (* my_mmm_dist_fnc) (int, int, int, int, int, const double*, double*);
 
 void avx_mmm_driver(int n, int dim, int B0, int B1, int BK, int nr_reps, int fun_index);
 

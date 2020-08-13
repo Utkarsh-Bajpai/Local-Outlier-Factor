@@ -10,9 +10,9 @@
 # include "../../include/file_utils.h"
 # include "../../include/Algorithm.h"
 # include "../../include/tsc_x86.h"
-# include "../include/metrics.h"
-# include "../include/ComputeKDistanceAll.h"
-# include "../include/ComputeKDistanceNeighborhood.h"
+# include "../../include/metrics.h"
+# include "../include/ComputeKDistanceAllUnrolled.h"
+# include "../include/ComputeKDistanceNeighborhoodUnrolled.h"
 //#include "../include/ComputePairwiseDistancesMMMUnroll.h"
 
 typedef long (* test_fun)(double*, double*, double*, int*, int*, int, int, int);
@@ -76,7 +76,7 @@ double KNN_fastest(int n, int k, int* k_neighborhood_index, const double* pairwi
             k_neighborhood_index[i * k + l] = entries_indices[l];
         }
     }
-    return 2 * n * (n - 1) * (log(n - 1));
+    return 2.0 * n * (n - 1.0) * (log(n - 1.0));
 }
 
 void addEntry(int i, int j, int n, int* local_idx, const double* pairwise_dist, double* entries) {

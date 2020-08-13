@@ -29,7 +29,7 @@ double ComputePairwiseDistances(int dim, int num_pts, const double* input_points
                                                             dim);
         }
     }
-    return (num_pts / 2 * num_pts) * (4 * dim + 1);
+    return (num_pts / 2.0 * num_pts) * (4.0 * dim + 1.0);
 }
 // Definition 3 ------------------------------------------------------>
 
@@ -72,7 +72,7 @@ double ComputeKDistanceAll(int k, int num_pts, const double* distances_indexed_p
     for (idx = 0; idx < num_pts; idx++) {
         ComputeKDistanceObject(idx, k, num_pts, distances_indexed_ptr, k_distances_indexed_ptr);
     }
-    return num_pts * (num_pts - 1) * log(num_pts - 1);
+    return num_pts * (num_pts - 1.0) * log(num_pts - 1.0);
 }
 
 // Definition 4 ------------------------------------------------------>
@@ -113,7 +113,7 @@ ComputeKDistanceNeighborhoodAll(int num_pts, int k, const double* k_distances_in
         }
     }
 
-    return num_pts * (num_pts - 1);
+    return num_pts * (num_pts - 1.0);
 }
 
 // Definition 5 ------------------------------------------------------>
